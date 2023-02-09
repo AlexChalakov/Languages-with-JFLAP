@@ -6,18 +6,17 @@
 			<x>85.0</x>
 			<y>278.0</y>
 			<initial/>
-			<final/>
 		</state>
 		<state id="1" name="q1">
 			<x>307.0</x>
 			<y>280.0</y>
 		</state>
+		<state id="2" name="q2">
+			<x>140.0</x>
+			<y>100.0</y>
+			<final/>
+		</state>
 		<!--The list of transitions.-->
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>d</read>
-		</transition>
 		<transition>
 			<from>1</from>
 			<to>1</to>
@@ -25,16 +24,71 @@
 		</transition>
 		<transition>
 			<from>0</from>
+			<to>1</to>
+			<read>v</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>v</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>i</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>1</from>
 			<to>1</to>
 			<read>m</read>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>0</to>
-			<read>-</read>
+			<from>0</from>
+			<to>2</to>
+			<read>d</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>d</read>
 		</transition>
 		<transition>
 			<from>1</from>
+			<to>1</to>
+			<read>v</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>*</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>+</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>i</read>
+		</transition>
+		<transition>
+			<from>0</from>
 			<to>1</to>
 			<read>i</read>
 		</transition>
@@ -45,43 +99,18 @@
 		</transition>
 		<transition>
 			<from>0</from>
-			<to>1</to>
-			<read>i</read>
+			<to>2</to>
+			<read>m</read>
 		</transition>
 		<transition>
-			<from>1</from>
+			<from>0</from>
 			<to>1</to>
 			<read>m</read>
 		</transition>
 		<transition>
 			<from>1</from>
 			<to>0</to>
-			<read>+</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>0</to>
-			<read>*</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>v</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>1</to>
-			<read>v</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>1</to>
-			<read>x</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>x</read>
+			<read>-</read>
 		</transition>
 	</automaton>
 </structure>
